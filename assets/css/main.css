@@ -1,3 +1,25 @@
+/* assets/css/main.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  /**
+   * Sports field white-line motif.
+   * Apply to a `relative overflow-hidden` container.
+   * Matches the pattern already used at myrecruitingcompass.com.
+   */
+  .field-lines::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 20px,
+      rgba(255, 255, 255, 0.15) 20px,
+      rgba(255, 255, 255, 0.15) 22px
+    );
+    pointer-events: none;
+  }
+}
