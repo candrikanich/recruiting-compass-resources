@@ -1,0 +1,23 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="55%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- field-lines motif -->
+  <g stroke="#ffffff" stroke-opacity="0.12" stroke-width="2" fill="none">
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <circle cx="600" cy="315" r="90"/>
+    <rect x="0" y="195" width="120" height="240"/>
+    <rect x="1080" y="195" width="120" height="240"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="80" y="300" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="600" fill="#d1fae5" letter-spacing="2">THE RECRUITING COMPASS</text>
+  <text x="80" y="390" font-family="Helvetica, Arial, sans-serif" font-size="84" font-weight="700" fill="#ffffff">Recruiting Resources</text>
+  <text x="80" y="450" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="400" fill="#a7f3d0">Free guides for college athletics recruiting</text>
+</svg>

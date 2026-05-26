@@ -43,6 +43,17 @@ useHead({
   link: [{ rel: 'canonical', href: canonicalUrl }],
   meta: [{ property: 'article:modified_time', content: article.value.lastReviewed }],
 })
+
+useSchemaOrg([
+  defineArticle({
+    headline: article.value.title,
+    description: article.value.description,
+    image: ogImage,
+    datePublished: article.value.lastUpdated,
+    dateModified: article.value.lastReviewed,
+    author: { name: 'The Recruiting Compass', url: config.siteUrl },
+  }),
+])
 </script>
 
 <template>
