@@ -21,8 +21,11 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  // url is env-driven so staging/preview emit their own canonical, sitemap,
+  // and OG URLs — never production's. @nuxtjs/seo also auto-marks non-production
+  // Vercel envs (VERCEL_ENV=preview) as noindex; set NUXT_SITE_ENV to override.
   site: {
-    url: 'https://therecruitingcompass.com',
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://therecruitingcompass.com',
     name: 'The Recruiting Compass',
     description: 'Free guides for college athletics recruiting — eligibility, timelines, contacting coaches, scholarships, and more.',
   },
@@ -43,8 +46,8 @@ export default defineNuxtConfig({
   schemaOrg: {
     identity: defineOrganization({
       name: 'The Recruiting Compass',
-      url: 'https://therecruitingcompass.com',
-      logo: 'https://therecruitingcompass.com/resources/og-default.png',
+      url: process.env.NUXT_PUBLIC_SITE_URL || 'https://therecruitingcompass.com',
+      logo: `${process.env.NUXT_PUBLIC_SITE_URL || 'https://therecruitingcompass.com'}/resources/og-default.png`,
     }),
   },
 
@@ -59,10 +62,10 @@ export default defineNuxtConfig({
     beehiivApiKey: '',        // NUXT_BEEHIIV_API_KEY
     beehiivPublicationId: '', // NUXT_BEEHIIV_PUBLICATION_ID
     public: {
-      siteUrl: 'https://therecruitingcompass.com',
-      appUrl: 'https://myrecruitingcompass.com',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://therecruitingcompass.com',
+      appUrl: process.env.NUXT_PUBLIC_APP_URL || 'https://myrecruitingcompass.com',
       // In dev: /api — in prod (behind landing site rewrite): /resources-api
-      apiPrefix: '/api',
+      apiPrefix: process.env.NUXT_PUBLIC_API_PREFIX || '/api',
     },
   },
 

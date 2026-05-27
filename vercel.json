@@ -1,4 +1,5 @@
 {
+  "installCommand": "npm ci",
   "buildCommand": "npm run generate",
   "outputDirectory": ".output/public",
   "framework": null
