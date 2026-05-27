@@ -1,0 +1,45 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "🧭Recruiting Resources" [ref=e6] [cursor=pointer]:
+        - /url: /resources/
+      - link "Open App →" [ref=e7] [cursor=pointer]:
+        - /url: https://myrecruitingcompass.com
+  - main [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e11]:
+        - navigation "Breadcrumb" [ref=e12]:
+          - link "Resources" [ref=e13] [cursor=pointer]:
+            - /url: /resources/
+          - text: ›
+          - link "Division Levels" [ref=e14] [cursor=pointer]:
+            - /url: /resources/divisions
+        - generic [ref=e16]:
+          - heading "Division Levels" [level=1] [ref=e17]
+          - paragraph [ref=e18]: D1 / D2 / D3 / NAIA / JUCO differences
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - paragraph [ref=e21]: 1 article
+          - group "Filter by audience" [ref=e22]:
+            - button "All" [ref=e23]
+            - button "Players" [ref=e24]
+            - button "Parents" [ref=e25]
+        - 'link "D1 vs. D2 vs. D3: Which Division Is Right for You? Sophomore D1 vs. D2 vs. D3: Which Division Is Right for You? Bigger isn''t always better. A clear-eyed comparison of NCAA divisions on time commitment, scholarships, academics, and fit. Reviewed 2026-05-27" [ref=e27] [cursor=pointer]':
+          - /url: /resources/divisions/d1-vs-d2-vs-d3-which-is-right
+          - generic [ref=e28]:
+            - 'img "D1 vs. D2 vs. D3: Which Division Is Right for You?"'
+          - generic [ref=e29]:
+            - generic [ref=e30]: Sophomore
+            - 'heading "D1 vs. D2 vs. D3: Which Division Is Right for You?" [level=3] [ref=e31]'
+            - paragraph [ref=e32]: Bigger isn't always better. A clear-eyed comparison of NCAA divisions on time commitment, scholarships, academics, and fit.
+          - generic [ref=e33]: Reviewed 2026-05-27
+  - contentinfo [ref=e34]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - paragraph [ref=e37]: The Recruiting Compass
+        - paragraph [ref=e38]: Free resources for college athletics recruiting.
+      - generic [ref=e39]:
+        - link "Open App →" [ref=e40] [cursor=pointer]:
+          - /url: https://myrecruitingcompass.com
+        - link "All Resources" [ref=e41] [cursor=pointer]:
+          - /url: /resources/
