@@ -26,7 +26,7 @@ const canonicalUrl = `${config.siteUrl}/resources/${categorySlug}/${slug}`
 const ogImage = article.value.ogImage ?? article.value.heroImage ?? `${config.siteUrl}/og-default.png`
 
 useSeoMeta({
-  title: `${article.value.title} | The Recruiting Compass`,
+  title: article.value.title,
   description: article.value.description,
   ogTitle: article.value.title,
   ogDescription: article.value.description,

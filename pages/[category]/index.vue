@@ -27,7 +27,7 @@ const filteredArticles = computed(() => {
 const { public: config } = useRuntimeConfig()
 
 useSeoMeta({
-  title: `${category.name} | The Recruiting Compass`,
+  title: category.name,
   description: `${category.description} — free guides for college athletics recruiting.`,
   ogTitle: `${category.name} | The Recruiting Compass`,
   ogDescription: `${category.description} — free guides for college athletics recruiting.`,

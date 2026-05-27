@@ -16,7 +16,7 @@ const countByCategory = computed(() => {
 })
 
 useSeoMeta({
-  title: 'College Recruiting Resources | The Recruiting Compass',
+  title: 'College Recruiting Resources',
   description: 'Free guides for college athletics recruiting — eligibility, timelines, contacting coaches, scholarships, and more.',
   ogTitle: 'College Recruiting Resources | The Recruiting Compass',
   ogDescription: 'Free guides for college athletics recruiting — eligibility, timelines, contacting coaches, scholarships, and more.',
