@@ -64,8 +64,10 @@ export default defineNuxtConfig({
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://therecruitingcompass.com',
       appUrl: process.env.NUXT_PUBLIC_APP_URL || 'https://myrecruitingcompass.com',
-      // In dev: /api — in prod (behind landing site rewrite): /resources-api
-      apiPrefix: process.env.NUXT_PUBLIC_API_PREFIX || '/api',
+      // app.baseURL '/resources' prefixes Nitro API routes too, so the
+      // newsletter handler is served at /resources/api/newsletter in every
+      // environment. The landing site's single /resources/* rewrite covers it.
+      apiPrefix: process.env.NUXT_PUBLIC_API_PREFIX || '/resources/api',
     },
   },
 
