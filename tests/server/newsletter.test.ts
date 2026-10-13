@@ -11,7 +11,7 @@ const validConfig = {
   beehiivPublicationId: 'pub_123',
 }
 
-const sentBody = () => JSON.parse(mockFetch.mock.calls[0][1].body)
+const sentBody = () => JSON.parse(mockFetch.mock.calls[0]![1].body)
 
 describe('subscribeToNewsletter', () => {
   beforeEach(() => {
@@ -25,7 +25,7 @@ describe('subscribeToNewsletter', () => {
 
     expect(result).toEqual({ success: true })
     expect(mockFetch).toHaveBeenCalledTimes(1)
-    const [url, init] = mockFetch.mock.calls[0]
+    const [url, init] = mockFetch.mock.calls[0]!
     expect(url).toBe('https://api.beehiiv.com/v2/publications/pub_123/subscriptions')
     expect(init.headers.Authorization).toBe('Bearer test-key')
     expect(sentBody()).toMatchObject({ email: 'user@example.com' })
