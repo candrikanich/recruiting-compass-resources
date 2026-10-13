@@ -4,6 +4,8 @@ defineProps<{ variant?: 'waitlist' | 'app' }>()
 const { public: config } = useRuntimeConfig()
 
 const email = ref('')
+// Honeypot: hidden from people, so a value here means a bot filled the form.
+const fax = ref('')
 const status = ref<'idle' | 'loading' | 'success' | 'error'>('idle')
 const errorMessage = ref('')
 
@@ -15,7 +17,7 @@ async function subscribe() {
     // apiPrefix: '/api' in dev, '/resources-api' in production (see .env.example)
     await $fetch(`${config.apiPrefix}/newsletter`, {
       method: 'POST',
-      body: { email: email.value },
+      body: { email: email.value, fax: fax.value },
     })
     status.value = 'success'
     email.value = ''
@@ -44,9 +46,18 @@ async function subscribe() {
       <p class="text-sm text-emerald-200 mb-2">Get recruiting tips by email:</p>
 
       <div v-if="status === 'success'" class="text-sm text-emerald-100 bg-emerald-600 rounded-lg px-3 py-2">
-        ✓ You're subscribed — check your inbox!
+        ✓ Almost there — check your inbox to confirm.
       </div>
       <form v-else @submit.prevent="subscribe" class="flex gap-2">
+        <input
+          v-model="fax"
+          type="text"
+          name="fax"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+          class="absolute -left-[9999px] h-px w-px opacity-0"
+        />
         <input
           v-model="email"
           type="email"
